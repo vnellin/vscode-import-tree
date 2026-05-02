@@ -1,0 +1,41 @@
+{
+  "name": "vscode-import-tree",
+  "displayName": "Import Tree",
+  "description": "Visual dependency graph — see what imports what and find unused files",
+  "version": "0.1.0",
+  "publisher": "puzzo",
+  "engines": { "vscode": "^1.85.0" },
+  "categories": ["Visualization", "Other"],
+  "activationEvents": ["onStartupFinished"],
+  "main": "./extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "importTree.showGraph",
+        "title": "Import Tree: Show Dependency Graph"
+      }
+    ],
+    "views": {
+      "explorer": [
+        {
+          "id": "importTree.unused",
+          "name": "Unused Files"
+        }
+      ]
+    },
+    "menus": {
+      "explorer/context": [
+        {
+          "command": "importTree.showGraph",
+          "group": "navigation"
+        }
+      ]
+    }
+  },
+  "scripts": {
+    "package": "vsce package",
+    "vsix": "vsce package -o vscode-import-tree.vsix",
+    "install": "npm run vsix && code --install-extension vscode-import-tree.vsix --force"
+  },
+  "devDependencies": {}
+}
