@@ -4,6 +4,11 @@
   "description": "Visual dependency graph — see what imports what and find unused files",
   "version": "0.1.0",
   "publisher": "puzzo",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/puzzo/vscode-import-tree"
+  },
+  "license": "MIT",
   "engines": { "vscode": "^1.85.0" },
   "categories": ["Visualization", "Other"],
   "activationEvents": ["onStartupFinished"],
