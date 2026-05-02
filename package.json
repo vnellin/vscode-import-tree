@@ -38,8 +38,7 @@
     }
   },
   "scripts": {
-    "package": "vsce package",
-    "vsix": "vsce package -o vscode-import-tree.vsix",
+    "vsix": "vsce package --patch -o vscode-import-tree.vsix",
     "install": "npm run vsix && code --install-extension vscode-import-tree.vsix --force"
   },
   "devDependencies": {}
